@@ -17,7 +17,7 @@
   copy:
     content: "{{ matrix_dimension_configuration|to_nice_yaml }}"
     dest: "{{ matrix_dimension_base_path }}/config.yaml"
-    mode: 0640
+    mode: 0644
     owner: "{{ matrix_user_username }}"
     group: "{{ matrix_dimension_user_gid }}"
   when: matrix_dimension_enabled|bool

@@ -29,10 +29,6 @@
 		add_header Access-Control-Allow-Origin *;
 	}
 
-	{% if matrix_nginx_proxy_proxy_matrix_nginx_status_enabled %}
-		{{ render_nginx_status_location_block(matrix_nginx_proxy_proxy_matrix_nginx_status_allowed_addresses) }}
-	{% endif %}
-
 	{% if matrix_nginx_proxy_proxy_matrix_corporal_api_enabled %}
 	location /_matrix/corporal {
 		{% if matrix_nginx_proxy_enabled %}
@@ -193,10 +189,6 @@ server {
 				proxy_pass http://127.0.0.1:{{ matrix_ssl_lets_encrypt_certbot_standalone_http_port }};
 			{% endif %}
 		}
-
-		{% if matrix_nginx_proxy_proxy_matrix_nginx_status_enabled %}
-			{{ render_nginx_status_location_block(matrix_nginx_proxy_proxy_matrix_nginx_status_allowed_addresses) }}
-		{% endif %}
 
 		location / {
 			return 301 https://$http_host$request_uri;

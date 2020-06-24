@@ -861,3 +861,22 @@ matrix_synapse_systemd_wanted_services_list: |
 # /matrix-synapse
 #
 ######################################################################
+
+matrix_synapse_federation_enabled: false
+
+matrix_ma1sd_enabled: false
+matrix_jitsi_enabled: false
+matrix_docker_network: infra_infra-net
+matrix_user_uid: 0
+matrix_user_gid: 0
+matrix_user_username: root
+matrix_user_groupname: root
+
+matrix_mailer_enabled: false
+matrix_synapse_email_smtp_host: mailer
+
+matrix_postgres_enabled: false
+dbhost: db
+
+matrix_ssl_retrieval_method: self-signed
+matrix_nginx_proxy_proxy_matrix_nginx_status_enabled: false
