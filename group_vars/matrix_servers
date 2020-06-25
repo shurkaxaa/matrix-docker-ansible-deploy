@@ -880,3 +880,5 @@ dbhost: db
 
 matrix_ssl_retrieval_method: self-signed
 matrix_nginx_proxy_proxy_matrix_nginx_status_enabled: false
+
+matrix_server_ip: 127.0.0.1
