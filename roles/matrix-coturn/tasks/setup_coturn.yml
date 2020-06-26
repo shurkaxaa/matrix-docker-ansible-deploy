@@ -107,13 +107,6 @@
 # Tasks related to getting rid of Coturn (if it was previously enabled)
 #
 
-- name: Ensure matrix-coturn-ssl-reload cronjob removed
-  cron:
-    user: root
-    cron_file: matrix-coturn-ssl-reload
-    state: absent
-  when: "not matrix_coturn_enabled|bool or not matrix_coturn_tls_enabled|bool"
-
 - name: Check existence of matrix-coturn service
   stat:
     path: "{{ matrix_systemd_path }}/matrix-coturn.service"

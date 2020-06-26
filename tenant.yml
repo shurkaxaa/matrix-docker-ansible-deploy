@@ -7,6 +7,7 @@
     - matrix-base
     - matrix-synapse
     - matrix-riot-web
+    - matrix-coturn
     - role: matrix-nginx-proxy
       vars:
         matrix_nginx_proxy_https_enabled: false

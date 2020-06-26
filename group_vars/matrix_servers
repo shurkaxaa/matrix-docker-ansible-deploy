@@ -882,3 +882,13 @@ matrix_ssl_retrieval_method: self-signed
 matrix_nginx_proxy_proxy_matrix_nginx_status_enabled: false
 
 matrix_server_ip: 127.0.0.1
+turn_server_ip: 127.0.0.1
+
+# external turn
+# https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/configuring-playbook-turn.md
+matrix_coturn_enabled: false
+matrix_synapse_turn_uris:
+- turns:{{turn_server_ip}}?transport=udp
+- turns:{{turn_server_ip}}?transport=tcp
+- turn:{{turn_server_ip}}?transport=udp
+- turn:{{turn_server_ip}}?transport=tcp
