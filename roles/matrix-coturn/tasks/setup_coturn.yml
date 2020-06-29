@@ -137,9 +137,3 @@
     path: "{{ matrix_coturn_base_path }}"
     state: absent
   when: "not matrix_coturn_enabled|bool"
-
-- name: Ensure coturn Docker image doesn't exist
-  docker_image:
-    name: "{{ matrix_coturn_docker_image }}"
-    state: absent
-  when: "not matrix_coturn_enabled|bool"
