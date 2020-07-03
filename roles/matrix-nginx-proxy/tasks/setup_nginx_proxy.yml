@@ -69,7 +69,7 @@
 - name: Ensure Matrix nginx-proxy configuration for jitsi domain exists
   template:
     src: "{{ role_path }}/templates/nginx/conf.d/matrix-jitsi.conf.j2"
-    dest: "{{ matrix_nginx_proxy_confd_path }}/matrix-jitsi.conf"
+    dest: "{{ matrix_nginx_proxy_confd_path }}/{{tenant}}-matrix-jitsi.conf"
     mode: 0644
   when: matrix_nginx_proxy_proxy_jitsi_enabled|bool
 

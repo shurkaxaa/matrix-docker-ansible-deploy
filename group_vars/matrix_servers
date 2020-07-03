@@ -892,3 +892,7 @@ matrix_synapse_turn_uris:
 - turns:{{turn_server_ip}}?transport=tcp
 - turn:{{turn_server_ip}}?transport=udp
 - turn:{{turn_server_ip}}?transport=tcp
+
+matrix_jitsi_enabled: true
+matrix_jitsi_web_stun_servers:
+- stun:{{turn_server_ip}}:3478
